@@ -45,10 +45,10 @@ class LinearRegression:
 
 
 if __name__ == "__main__":
-    x = housing.data[:,0]
-    y = housing.target
-    # x= np.array([ 0, 8, 15, 22, 38, 40])
-    # y= np.array([ 32, 46, 59, 62, 72, 100])
+    # x = housing.data[:,0]
+    # y = housing.target
+    x= np.array([ 0, 8, 15, 22, 38, 40])
+    y= np.array([ 32, 46, 59, 62, 72, 100])
 
     model = LinearRegression()
     model.fit(x,y)
