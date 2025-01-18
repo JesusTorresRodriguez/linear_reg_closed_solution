@@ -52,15 +52,15 @@ class LinearRegression:
         return 1 - np.sum((y - y_pred) ** 2) / np.sum((y - np.mean(y)) ** 2)
 
 if __name__ == "__main__":
-    # dataset_housingr = pd.read_csv('./reg_linear_gradient_desc/housing2r.csv')
-    # features = ['RM', 'AGE', 'DIS', 'RAD', 'TAX']
-    # target = ['y'] #target, true value
-    # x, y = dataset_housingr[features].values, np.squeeze(dataset_housingr[target].values) 
-    # # Normaliza la data de entrada
-    # x = StandardScaler().fit_transform(x)
-    x = np.array([0, 8, 15, 22, 38, 40])
-    x = x.reshape((6, 1))
-    y= np.array([ 32, 46, 59, 62, 72, 100])
+    dataset_housingr = pd.read_csv('./reg_linear_gradient_desc/housing2r.csv')
+    features = ['RM', 'AGE', 'DIS', 'RAD', 'TAX']
+    target = ['y'] #target, true value
+    x, y = dataset_housingr[features].values, np.squeeze(dataset_housingr[target].values) 
+    # Normaliza la data de entrada
+    x = StandardScaler().fit_transform(x)
+    # x = np.array([0, 8, 15, 22, 38, 40])
+    # x = x.reshape((6, 1))
+    # y= np.array([ 32, 46, 59, 62, 72, 100])
 
     # Entrena el modelo
     model = LinearRegression()
